@@ -6,14 +6,16 @@ using System.Text;
 
 namespace Teste
 {
-    class Register
+    public class Register
     {
         static Index indexinstance = new Index(); //aceder à classe index
         static Login loginindex = new Login(); //aceder à classe login
         static string firstInput; //primeiro input do user
         static string lastInput; //último input do user
-        static string username; //guardar o username
-        static string password; //guardar a password
+        public string username = input_username; //guardar o username
+        public string password = input_password; //guardar a password
+        static string input_username; //guardar o input do username
+        static string input_password; //guardar o input da password
 
 
         //começa aqui
@@ -69,9 +71,9 @@ namespace Teste
         private void RegisterInput() {
             Console.WriteLine("\n Vamos começar a registar !!!! \n");
             Console.WriteLine("\n Qual é o teu username? \n");
-            username = Console.ReadLine();
+            input_username = Console.ReadLine();
             Console.WriteLine("\n Qual é a tua password? \n");
-            password = Console.ReadLine();
+            input_password = Console.ReadLine();
 
             //nesta parte aqui vou fingir que está um robot a guardar
             //repito a mesma frase 3 vezes com o while
@@ -90,6 +92,8 @@ namespace Teste
 
         //método onde vai pedir o último input ao user
         private void LastInput() {
+            username = input_username; //guardar o input do username na var username
+            password = input_password; //guardar o input da password na var password
             Console.WriteLine("\n Onde deseja ir agora? \n");
             Console.WriteLine("\n 1 - Página Inicial \n");
             Console.WriteLine("\n 2 - Login \n");

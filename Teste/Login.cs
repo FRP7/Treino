@@ -87,14 +87,14 @@ namespace Teste
             //
 
             //verificar se o user e pass inseridos estão correctos e mudar bool se sim
-            if(username == "x") {
+            if(username == registerinstance.username) {
                 isUserCorrect = true;
             }
             else {
                 isUserCorrect = false;
             }
 
-            if(password == "y") {
+            if(password == registerinstance.password) {
                 isPassCorrect = true;
             }
             else {
