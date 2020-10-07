@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace Teste
@@ -7,7 +9,7 @@ namespace Teste
     class Register
     {
         public void RegisterPage() {
-            Console.WriteLine("Página de register");
+            Console.WriteLine("\n Página de register");
         }
     }
 }

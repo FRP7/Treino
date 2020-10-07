@@ -28,7 +28,6 @@ namespace Teste
             //
             //input do user
             userInput = Console.ReadLine();
-            Console.WriteLine(userInput);
             Connect();
             //
         }
@@ -38,19 +37,19 @@ namespace Teste
 
             //enviar o user pa classe login se ele escrever 1
             if(userInput == "1") {
-                Console.WriteLine("Vais para o Login \n\n\n");
+                Console.WriteLine("\n Vais para o Login \n\n\n");
                 logininstance.LoginPage();
             }
 
             //enviar o user pa classe register se ele escrever 2
             else if (userInput == "2") {
-                Console.WriteLine("Vais para o Register \n\n\n");
+                Console.WriteLine("\n Vais para o Register \n\n\n");
                 registerinstance.RegisterPage();
             }
 
             //chamar o método start de novo em caso de erro (para parecer um restart)
             else {
-                Console.WriteLine("What??? Tente de novo \n\n\n");
+                Console.WriteLine("\n What??? Tente de novo \n\n\n");
                 Start();
             }
         }
