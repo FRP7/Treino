@@ -22,7 +22,7 @@ namespace Teste
         //é aqui a raiz deste index
         public static void Start() {
             //start
-            Console.WriteLine("Bem vindo a este programa! Onde quer ir? \n");
+            Console.WriteLine("Bem vindo à Pagina Inicial ! Onde quer ir? \n");
             Console.WriteLine("1 - Login \n");
             Console.WriteLine("2 - Register \n");
             //
