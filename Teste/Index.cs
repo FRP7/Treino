@@ -8,39 +8,56 @@ namespace Teste
 {
     class Index {
 
-        //variables
-        static string userInput;
-        static Login logininstance = new Login();
-        static Register registerinstance = new Register();
+        //variáveis
+        static string userInput; //onde vai alojar o input do user
+        static Login logininstance = new Login(); //aceder à classe Login
+        static Register registerinstance = new Register(); //aceder à classe Register
         /// 
 
-        static void Main(string[] args) {
-
-        //start
-        Console.WriteLine("Bem vindo a este programa! Onde quer ir? \n");
-        Console.WriteLine("1 - Login \n");
-        Console.WriteLine("2 - Register \n");
-        //
-
-        //user input
-        userInput = Console.ReadLine();
-        Console.WriteLine(userInput);
-        Connect();
-        //
+        //começa aqui
+        static void Main(string[] args) { 
+            Start(); //chama o método start
         }
 
+        //é aqui a raiz deste index
+        public static void Start() {
+            //start
+            Console.WriteLine("Bem vindo a este programa! Onde quer ir? \n");
+            Console.WriteLine("1 - Login \n");
+            Console.WriteLine("2 - Register \n");
+            //
+            //input do user
+            userInput = Console.ReadLine();
+            Console.WriteLine(userInput);
+            Connect();
+            //
+        }
+
+        //método para verificar os inputs
         private static void Connect() {
+
+            //enviar o user pa classe login se ele escrever 1
             if(userInput == "1") {
-                Console.WriteLine("You're going to Login");
+                Console.WriteLine("Vais para o Login \n\n\n");
                 logininstance.LoginPage();
             }
+
+            //enviar o user pa classe register se ele escrever 2
             else if (userInput == "2") {
-                Console.WriteLine("You're going to Register");
+                Console.WriteLine("Vais para o Register \n\n\n");
                 registerinstance.RegisterPage();
             }
+
+            //chamar o método start de novo em caso de erro (para parecer um restart)
             else {
-                Console.WriteLine("What??? Try Again");
+                Console.WriteLine("What??? Tente de novo \n\n\n");
+                Start();
             }
+        }
+
+        //em caso de querer voltar quando estou noutras classes
+        public void Return() {
+            Start();
         }
     }
 }

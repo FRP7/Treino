@@ -7,7 +7,7 @@ namespace Teste
     class Register
     {
         public void RegisterPage() {
-            Console.WriteLine("Register Page");
+            Console.WriteLine("Página de register");
         }
     }
 }
