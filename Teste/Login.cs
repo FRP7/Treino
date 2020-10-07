@@ -107,10 +107,29 @@ namespace Teste
                 Console.WriteLine("\n Cool! Access granted !!!! \n");
             }
             else {
-                Console.WriteLine("\n Uma ou mais credenciais estão erradas. Tente de novo! \n");
-                LoginInput(); //chamar o método login (assim parece que reiniciou
+                Console.WriteLine("\n Uma ou mais credenciais estão erradas. O que quer fazer? \n");
+                WrongInput(); //enviar o user para este método que vai dar algumas opções
             }
             //
+        }
+
+        //método que dá a opção ao user de tentar logar de novo ou de retormar à página principal
+        private void WrongInput() {
+            string userwronginput;
+            Console.WriteLine("\n 1 - Tentar de novo \n");
+            Console.WriteLine("\n 2 - Retomar à Página Principal \n");
+            userwronginput = Console.ReadLine();
+
+            if(userwronginput == "1") {
+                LoginInput(); //tenta de novo
+            }
+            else if (userwronginput == "2") {
+                indexinstance.Return(); //retoma à página principal
+            }
+            else {
+                Console.WriteLine("\n What?? Tente de novo! \n");
+                WrongInput(); //tenta de novo se não seleccionar nenhuma das opções
+            }
         }
     }
 }
